@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllysSandBox", "EllysSandBox\EllysSandBox.csproj", "{B5D74828-14C4-486A-A3AC-03800E36962A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllySandbox", "EllySandbox\EllySandbox.csproj", "{9E4BF34E-C92D-4249-89CF-E7C9119EB1A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B5D74828-14C4-486A-A3AC-03800E36962A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B5D74828-14C4-486A-A3AC-03800E36962A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B5D74828-14C4-486A-A3AC-03800E36962A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5D74828-14C4-486A-A3AC-03800E36962A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E4BF34E-C92D-4249-89CF-E7C9119EB1A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E4BF34E-C92D-4249-89CF-E7C9119EB1A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E4BF34E-C92D-4249-89CF-E7C9119EB1A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4BF34E-C92D-4249-89CF-E7C9119EB1A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {58CD508D-22C7-448B-A59E-D25FFEECE434}
+		SolutionGuid = {85969FBC-081B-4E53-B330-1E2F885D29C6}
 	EndGlobalSection
 EndGlobal
