@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 using EllySandbox.Engine.Base;
 using EllySandbox.Engine.Helper;
@@ -21,6 +23,9 @@ namespace EllySandbox.Engine.Module
     /// </summary>
     class EllyApplication : ModuleBase
     {
+        public const int SW_HIDE = 0;
+        public const int SW_SHOW = 5;
+
         private ApplicationInfo Appinfo;
         private EPath epath;
 
@@ -104,12 +109,22 @@ namespace EllySandbox.Engine.Module
 
         public override void OnStart()
         {
+            /* Just output the initialize result */
             base.OnStart();
             OutputSetting();
+
+            /* Depend on develop mode is on, control the visibality of console window */
+            var handle = GetConsoleWindow();
+            ShowWindow(handle, Appinfo.DevelopMode ? SW_SHOW : SW_HIDE);
         }
         private void OutputSetting()
         {
             Debug.Log(GetInfo().ModuleName, Appinfo, Debug.DebugType.Log);
         }
+
+        [DllImport("kernel32.dll")]
+        static extern IntPtr GetConsoleWindow();
+        [DllImport("user32.dll")]
+        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
     }
 }

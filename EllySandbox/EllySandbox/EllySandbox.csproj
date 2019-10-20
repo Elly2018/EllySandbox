@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EllySandbox.cs" />
+    <Compile Include="Engine\Base\GUIPropertiesField.cs" />
     <Compile Include="Engine\Helper\EPath.cs" />
     <Compile Include="Engine\Helper\HelperBase.cs" />
     <Compile Include="Engine\Helper\HelperFactory.cs" />
@@ -75,8 +76,23 @@
     <Compile Include="Engine\Module\ModuleFactory.cs" />
     <Compile Include="Engine\Module\WebMenu.cs" />
     <Compile Include="Engine\Struct\ApplicationInfo.cs" />
+    <Compile Include="Engine\Struct\Color.cs" />
+    <Compile Include="Engine\Struct\IVec2.cs" />
+    <Compile Include="Engine\Struct\IVec3.cs" />
     <Compile Include="Engine\Struct\LanguageStruct.cs" />
     <Compile Include="Engine\Struct\ModuleInfo.cs" />
+    <Compile Include="Engine\Base\GUIBase.cs" />
+    <Compile Include="Engine\Struct\Rect.cs" />
+    <Compile Include="Engine\Struct\Vec2.cs" />
+    <Compile Include="Engine\Struct\Vec3.cs" />
+    <Compile Include="Engine\UI\GUIButton.cs" />
+    <Compile Include="Engine\UI\GUIDropdown.cs" />
+    <Compile Include="Engine\UI\GUIImage.cs" />
+    <Compile Include="Engine\UI\GUIMenubar.cs" />
+    <Compile Include="Engine\UI\GUISlider.cs" />
+    <Compile Include="Engine\UI\GUIText.cs" />
+    <Compile Include="Engine\UI\GUIToggle.cs" />
+    <Compile Include="Engine\UI\GUIWindow.cs" />
     <Compile Include="Engine\Web\WebHandle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -85,8 +101,6 @@
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Engine\UI\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
