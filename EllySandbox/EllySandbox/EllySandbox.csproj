@@ -27,7 +27,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -47,6 +47,12 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,12 +62,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EllySandbox.cs" />
+    <Compile Include="Engine\Helper\EPath.cs" />
+    <Compile Include="Engine\Helper\HelperBase.cs" />
+    <Compile Include="Engine\Helper\HelperFactory.cs" />
+    <Compile Include="Engine\Interface\ILogger.cs" />
+    <Compile Include="Engine\Interface\IModuleLifeCycle.cs" />
+    <Compile Include="Engine\Module\Debug.cs" />
+    <Compile Include="Engine\Module\EllyApplication.cs" />
+    <Compile Include="Engine\Base\ModuleBase.cs" />
+    <Compile Include="Engine\Module\Language.cs" />
+    <Compile Include="Engine\Module\ModSupport.cs" />
+    <Compile Include="Engine\Module\ModuleFactory.cs" />
+    <Compile Include="Engine\Module\WebMenu.cs" />
+    <Compile Include="Engine\Struct\ApplicationInfo.cs" />
+    <Compile Include="Engine\Struct\LanguageStruct.cs" />
+    <Compile Include="Engine\Struct\ModuleInfo.cs" />
+    <Compile Include="Engine\Web\WebHandle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="OpenTK.dll.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Engine\UI\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
