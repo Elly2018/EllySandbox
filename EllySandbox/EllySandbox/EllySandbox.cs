@@ -4,6 +4,7 @@ using OpenTK.Graphics;
 using OpenTK.Graphics.ES30;
 using EllySandbox.Engine.Module;
 using EllySandbox.Engine.Helper;
+using System.Web.Routing;
 
 namespace EllySandbox
 {
@@ -26,7 +27,10 @@ namespace EllySandbox
         /// Game window minimum size height
         /// </summary>
         public const int MinimumWindowHeight = 600;
-
+        /// <summary>
+        /// The route to guide how the game page cycle work
+        /// </summary>
+        private Route route;
 
         /// <summary>
         /// The program enter point

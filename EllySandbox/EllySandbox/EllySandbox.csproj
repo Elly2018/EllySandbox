@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,6 +38,12 @@
     <StartupObject>EllySandbox.EllySandbox</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AssimpNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=0d51b391f59f42a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\AssimpNet.4.1.0\lib\net40\AssimpNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Magick.NET-Q16-AnyCPU, Version=7.14.4.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\Magick.NET-Q16-AnyCPU.7.14.4\lib\net40\Magick.NET-Q16-AnyCPU.dll</HintPath>
+    </Reference>
     <Reference Include="NanoVG.NET, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NanoVG.NET.1.0.5\lib\net45\NanoVG.NET.dll</HintPath>
     </Reference>
@@ -47,6 +55,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -61,8 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design\Page\Intro.cs" />
+    <Compile Include="Design\Route.cs" />
     <Compile Include="EllySandbox.cs" />
     <Compile Include="Engine\Base\GUIPropertiesField.cs" />
+    <Compile Include="Engine\Base\MasterPageBase.cs" />
     <Compile Include="Engine\Helper\EPath.cs" />
     <Compile Include="Engine\Helper\HelperBase.cs" />
     <Compile Include="Engine\Helper\HelperFactory.cs" />
@@ -77,12 +89,14 @@
     <Compile Include="Engine\Module\WebMenu.cs" />
     <Compile Include="Engine\Struct\ApplicationInfo.cs" />
     <Compile Include="Engine\Struct\Color.cs" />
+    <Compile Include="Engine\Struct\IRect.cs" />
     <Compile Include="Engine\Struct\IVec2.cs" />
     <Compile Include="Engine\Struct\IVec3.cs" />
     <Compile Include="Engine\Struct\LanguageStruct.cs" />
     <Compile Include="Engine\Struct\ModuleInfo.cs" />
     <Compile Include="Engine\Base\GUIBase.cs" />
     <Compile Include="Engine\Struct\Rect.cs" />
+    <Compile Include="Engine\Struct\Texture2D.cs" />
     <Compile Include="Engine\Struct\Vec2.cs" />
     <Compile Include="Engine\Struct\Vec3.cs" />
     <Compile Include="Engine\UI\GUIButton.cs" />
@@ -93,7 +107,6 @@
     <Compile Include="Engine\UI\GUIText.cs" />
     <Compile Include="Engine\UI\GUIToggle.cs" />
     <Compile Include="Engine\UI\GUIWindow.cs" />
-    <Compile Include="Engine\Web\WebHandle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -103,4 +116,11 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\AssimpNet.4.1.0\build\AssimpNet.targets" Condition="Exists('..\packages\AssimpNet.4.1.0\build\AssimpNet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\AssimpNet.4.1.0\build\AssimpNet.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\AssimpNet.4.1.0\build\AssimpNet.targets'))" />
+  </Target>
 </Project>

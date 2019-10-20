@@ -1,4 +1,5 @@
-﻿using EllySandbox.Engine.Base;
+﻿using EllySandbox.Design;
+using EllySandbox.Engine.Base;
 
 namespace EllySandbox.Engine.Module
 {
@@ -27,6 +28,7 @@ namespace EllySandbox.Engine.Module
                 new WebMenu(),
                 new ModSupport(),
                 new Language(),
+                new Route(),
             };
         }
         public static T GetModuleByType<T>() where T : ModuleBase
