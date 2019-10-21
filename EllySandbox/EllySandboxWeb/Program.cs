@@ -23,7 +23,7 @@ namespace EllySandboxWeb
             {
                 bool develop = JsonConvert.DeserializeObject<ApplicationInfo>(File.ReadAllText(
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Elly Sandbox", "setting", "Appinfo.json"))
-                ).DevelopMode;
+                ).OpenConsole;
                 ShowWindow(GetConsoleWindow(), develop ? SW_SHOW : SW_HIDE);
             }
             catch
@@ -38,6 +38,7 @@ namespace EllySandboxWeb
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseWebRoot("bin");
                     webBuilder.UseStartup<Startup>();
                 });
 

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllySandbox", "EllySandbox\EllySandbox.csproj", "{9E4BF34E-C92D-4249-89CF-E7C9119EB1A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EllySandboxWeb", "EllySandboxWeb\EllySandboxWeb.csproj", "{7465F7F5-75F3-40CE-B98C-A34620C65025}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EllySandboxWeb", "EllySandboxWeb\EllySandboxWeb.csproj", "{7465F7F5-75F3-40CE-B98C-A34620C65025}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

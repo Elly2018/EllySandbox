@@ -91,7 +91,7 @@ namespace EllySandbox.Engine.Module
         {
             if (!File.Exists(Path.Combine(epath._ApplicationConfigPath(), EPath.ApplicationSetting, "Appinfo.json")))
                 File.WriteAllText(Path.Combine(epath._ApplicationConfigPath(), EPath.ApplicationSetting, "Appinfo.json"),
-                    JsonConvert.SerializeObject(new ApplicationInfo(false, true), Formatting.Indented));
+                    JsonConvert.SerializeObject(new ApplicationInfo(false, true, true), Formatting.Indented));
 
             try
             {
@@ -102,7 +102,7 @@ namespace EllySandbox.Engine.Module
                 if (File.Exists(Path.Combine(epath._ApplicationConfigPath(), EPath.ApplicationSetting, "Appinfo.json")))
                     File.Delete(Path.Combine(epath._ApplicationConfigPath(), EPath.ApplicationSetting, "Appinfo.json"));
                 File.WriteAllText(Path.Combine(epath._ApplicationConfigPath(), EPath.ApplicationSetting, "Appinfo.json"),
-                    JsonConvert.SerializeObject(new ApplicationInfo(false, true), Formatting.Indented));
+                    JsonConvert.SerializeObject(new ApplicationInfo(false, true, true), Formatting.Indented));
                 Appinfo = JsonConvert.DeserializeObject<ApplicationInfo>(File.ReadAllText(Path.Combine(epath._ApplicationConfigPath(), "setting", "Appinfo.json")));
             }
         }
@@ -115,7 +115,7 @@ namespace EllySandbox.Engine.Module
 
             /* Depend on develop mode is on, control the visibality of console window */
             var handle = GetConsoleWindow();
-            ShowWindow(handle, Appinfo.DevelopMode ? SW_SHOW : SW_HIDE);
+            ShowWindow(handle, Appinfo.OpenConsole ? SW_SHOW : SW_HIDE);
         }
         private void OutputSetting()
         {

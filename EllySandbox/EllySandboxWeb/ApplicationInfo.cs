@@ -9,11 +9,13 @@
     {
         public bool fullscreen;
         public bool DevelopMode;
+        public bool OpenConsole;
 
-        public ApplicationInfo(bool fullscreen, bool developMode)
+        public ApplicationInfo(bool fullscreen, bool developMode, bool console)
         {
             this.fullscreen = fullscreen;
             DevelopMode = developMode;
+            OpenConsole = console;
         }
 
         public override string ToString()

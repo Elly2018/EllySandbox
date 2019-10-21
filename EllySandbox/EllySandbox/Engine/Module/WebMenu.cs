@@ -33,7 +33,11 @@ namespace EllySandbox.Engine.Module
         public override void OnDestroy()
         {
             base.OnDestroy();
-            p.Kill();
+            try
+            {
+                p.Kill();
+            }
+            catch { }
         }
     }
 }
