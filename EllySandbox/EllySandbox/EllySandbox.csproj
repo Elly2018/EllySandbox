@@ -73,11 +73,14 @@
     <Compile Include="Design\Page\Intro.cs" />
     <Compile Include="Design\Route.cs" />
     <Compile Include="EllySandbox.cs" />
+    <Compile Include="Engine\Base\2DRenderBase.cs" />
+    <Compile Include="Engine\Base\EObject.cs" />
     <Compile Include="Engine\Base\GUIPropertiesField.cs" />
     <Compile Include="Engine\Base\MasterPageBase.cs" />
     <Compile Include="Engine\Helper\EPath.cs" />
     <Compile Include="Engine\Helper\HelperBase.cs" />
     <Compile Include="Engine\Helper\HelperFactory.cs" />
+    <Compile Include="Engine\Interface\I2DRenderer.cs" />
     <Compile Include="Engine\Interface\ILogger.cs" />
     <Compile Include="Engine\Interface\IModuleLifeCycle.cs" />
     <Compile Include="Engine\Module\Debug.cs" />
@@ -99,14 +102,16 @@
     <Compile Include="Engine\Struct\Texture2D.cs" />
     <Compile Include="Engine\Struct\Vec2.cs" />
     <Compile Include="Engine\Struct\Vec3.cs" />
-    <Compile Include="Engine\UI\GUIButton.cs" />
-    <Compile Include="Engine\UI\GUIDropdown.cs" />
-    <Compile Include="Engine\UI\GUIImage.cs" />
-    <Compile Include="Engine\UI\GUIMenubar.cs" />
-    <Compile Include="Engine\UI\GUISlider.cs" />
-    <Compile Include="Engine\UI\GUIText.cs" />
-    <Compile Include="Engine\UI\GUIToggle.cs" />
-    <Compile Include="Engine\UI\GUIWindow.cs" />
+    <Compile Include="Engine\UI\Button.cs" />
+    <Compile Include="Engine\UI\Dropdown.cs" />
+    <Compile Include="Engine\UI\HorizontalLayout.cs" />
+    <Compile Include="Engine\UI\Image.cs" />
+    <Compile Include="Engine\UI\Menubar.cs" />
+    <Compile Include="Engine\UI\Slider.cs" />
+    <Compile Include="Engine\UI\Text.cs" />
+    <Compile Include="Engine\UI\Toggle.cs" />
+    <Compile Include="Engine\UI\VerticalLayout.cs" />
+    <Compile Include="Engine\UI\Window.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

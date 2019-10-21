@@ -9,7 +9,7 @@ namespace EllySandbox.Engine.Base
     /// </summary>
     abstract class ModuleBase : IModuleLifeCycle
     {
-        public bool ModuleActive = false;
+        private bool ModuleActive = false;
 
         protected abstract ModuleInfo GetInfo();
 

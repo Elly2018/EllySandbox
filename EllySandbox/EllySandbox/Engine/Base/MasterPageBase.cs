@@ -16,37 +16,37 @@ namespace EllySandbox.Engine.Base
             return active;
         }
 
-        public void OnDestroy()
+        public virtual void OnDestroy()
         {
 
         }
 
-        public void OnExit()
+        public virtual void OnExit()
         {
             active = false;
         }
 
-        public void OnLoad()
+        public virtual void OnLoad()
         {
             
         }
 
-        public void OnPause()
+        public virtual void OnPause()
         {
             
         }
 
-        public void OnRenderUpdate()
+        public virtual void OnRenderUpdate()
         {
             
         }
 
-        public void OnStart()
+        public virtual void OnStart()
         {
             active = true;
         }
 
-        public void OnUpdate()
+        public virtual void OnUpdate()
         {
             
         }
